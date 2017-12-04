@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[添加远程Git仓库]]></title>
+    <url>%2F2017%2F12%2F04%2FMy-New-Post%2F</url>
+    <content type="text"><![CDATA[添加git远程仓库可以将本地仓库中的文件同步到github上，这样多人合作一个项目时，项目组成员只需要克隆远程仓库的地址，就可以了解你的所有历史操作以及项目的所有代码。第一步——在github上登录，并创建新的项目仓库：第二步——将本地仓库添加到远程Git仓库（有如下图中的三种方式）：第一种方式——将项目克隆到本地并执行github上的命令：12345678$ git clone git@github.com:alolonghun/firstRes.git// 其中&quot;git@github.com:alolonghun/firstRes.git&quot;即你的远程库的地址，每个人都使用自己的地址echo &quot;# firstRes&quot; &gt;&gt; README.md$ git init$ git add README.md$ git commit -m &quot;first commit&quot;$ git remote add origin git@github.com:alolonghun/firstRes.git$ git push -u origin master 第二种方式——关联本地仓库到远程仓库：123$ git remote add origin git@github.com:alolonghun/firstRes.git$ git push -u origin master// 将本地库的所有内容推送到远程库上]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F12%2F04%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <tags>
+        <tag>Testing</tag>
+        <tag>Another Tag</tag>
+      </tags>
+  </entry>
+</search>
