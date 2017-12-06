@@ -1,0 +1,1 @@
+var titleTime,OriginTitile=document.title;document.addEventListener("visibilitychange",function(){document.hidden?($('[rel="icon"]').attr("href","/img/TEP.ico"),document.title="╭(°A°`)╮ 你去哪啦 ~",clearTimeout(titleTime)):($('[rel="icon"]').attr("href","/favicon.ico"),document.title="(ฅ>ω<*ฅ) 回來就好 ~"+OriginTitile,titleTime=setTimeout(function(){document.title=OriginTitile},2e3))});
