@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Github Pages + Hexo搭建个人博客]]></title>
-    <url>%2F2017%2F12%2F05%2Fmy-hexo%2F</url>
-    <content type="text"><![CDATA[虽然使用Github Pages + Hexo让构建个人博客变得十分简单，但是我相信还是会有同学不知道怎么搭建个人博客。在此，我来普及一波！ 准备1.注册一个Github的账号(大多数人应该都有，不多说了)，然后下载并安装Git2.安装Node.js(这里推荐安装v7及以下版本，新版本可能会出现意想不到的问题)，安装过程一路next就行3.安装一个文本编辑器，比如Sublime或者Notepad++ 准备好了上述的内容后，我们就开始搭建属于自己的博客吧！ 过程新建Github仓库 接下来为项目取名，规则是：你的用户名 + “.github.io”，如下图所示：之后点击”Create repository”按钮就完成了创建。 安装Hexo此时到了Node.js派上用场的时候了，打开安装好的Node.js command prompt，输入下面几条指令：1.安装Hexo脚手架1npm install hexo-cli -g 2.新建博客目录(这将是你放置博客的目录)123456// 以下是我的存放位置，大家可任选位置存放// 进入D盘d:// 新建Blogs文件夹并进入md Blogs &amp;&amp; cd Blogs 3.初始化Hexo(下面的alolonghun需要换成你自己的用户名)1hexo init alolonghun.github.io 4.启动Hexo12345// 切换到alolonghun.github.io目录下cd alolonghun.github.io// hexo s === hexo server(启动服务)hexo s 此时你在浏览器地址栏输入localhost:4000，就会看到你的博客首页了，到这里我们已经成功了一半了，为什么说一半呢？因为页面自带的landscape主题不太美观:P，我们需要使用其它主题来美化我们的博客页面——比如说Next:)。 安装Next12// 克隆Next主题到theme文件夹git clone https://github.com/iissnan/hexo-theme-next themes/next 配置站点配置文件使用之前下载好的文本编辑器打开位于你的用户名.github.io文件夹下的_config.yml文件，这个就是你的站点配置文件，使用ctrl + F打开搜索功能，搜索字段”theme”，找到如下内容(把它的值由landscape改为next)：12// 注意theme:和next之间一定要有空格，否则不会生效theme: next 其它的配置例如title、author、description等可参见Hexo官方文档 配置Next主题配置文件Next主题配置文件位于你的用户名.github.io/themes/next目录下的_config.yml文件，其中参数比较多，就不一一赘述了，详细可参考Next官方文档如果还有不懂，可以参考我的博客的配置： 配置完之后，在执行下面的命令：12// 启动hexohexo s 现在的界面是不是美观了很多？此时，我们虽然完成了个人博客基本框架的搭建，但是博客始终都是在本地访问的，我们的终极目标是在线上能够通过某个地址访问到自己的博客网站，其实很简单，继续我们未完的征程： 安装自动部署工具12// 首先安装hexo-deployer-git插件npm install hexo-deployer-git --save 部署到github上12345678// 清除缓存hexo clean// 生成静态文件并且部署到github(hexo deploy就用到了hexo-deployer-git插件)hexo generate &amp;&amp; hexo deploy// 上面的命令的简写hexo g &amp;&amp; hexo d]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[添加远程Git仓库]]></title>
     <url>%2F2017%2F12%2F04%2FMy-New-Post%2F</url>
     <content type="text"><![CDATA[添加git远程仓库可以将本地仓库中的文件同步到github上，这样多人合作一个项目时，项目组成员只需要克隆远程仓库的地址，就可以了解你的所有历史操作以及项目的所有代码。第一步——在github上登录，并创建新的项目仓库：第二步——将本地仓库添加到远程Git仓库（有如下图中的三种方式）：第一种方式——将项目克隆到本地并执行github上的命令：12345678$ git clone git@github.com:alolonghun/firstRes.git// 其中&quot;git@github.com:alolonghun/firstRes.git&quot;即你的远程库的地址，每个人都使用自己的地址echo &quot;# firstRes&quot; &gt;&gt; README.md$ git init$ git add README.md$ git commit -m &quot;first commit&quot;$ git remote add origin git@github.com:alolonghun/firstRes.git$ git push -u origin master 第二种方式——关联本地仓库到远程仓库：123$ git remote add origin git@github.com:alolonghun/firstRes.git$ git push -u origin master// 将本地库的所有内容推送到远程库上]]></content>
       <categories>
         <category>Git</category>
       </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2017%2F12%2F04%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[Github Pages + Hexo搭建个人博客]]></title>
+    <url>%2F2017%2F10%2F05%2FMy-Hexo%2F</url>
+    <content type="text"><![CDATA[虽然使用Github Pages + Hexo让构建个人博客变得十分简单，但是我相信还是会有同学不知道怎么搭建个人博客。在此，我来普及一波！ 准备1.注册一个Github的账号(大多数人应该都有，不多说了)，然后下载并安装Git2.安装Node.js(这里推荐安装v7及以下版本，新版本可能会出现意想不到的问题)，安装过程一路next就行3.安装一个文本编辑器，比如Sublime或者Notepad++ 准备好了上述的内容后，我们就开始搭建属于自己的博客吧！ 过程新建Github仓库 接下来为项目取名，规则是：你的用户名 + “.github.io”，如下图所示：之后点击”Create repository”按钮就完成了创建。 安装Hexo此时到了Node.js派上用场的时候了，打开安装好的Node.js command prompt，输入下面几条指令：1.安装Hexo脚手架1npm install hexo-cli -g 2.新建博客目录(这将是你放置博客的目录)123456// 以下是我的存放位置，大家可任选位置存放// 进入D盘d:// 新建Blogs文件夹并进入md Blogs &amp;&amp; cd Blogs 3.初始化Hexo(下面的alolonghun需要换成你自己的用户名)1hexo init alolonghun.github.io 4.启动Hexo12345// 切换到alolonghun.github.io目录下cd alolonghun.github.io// hexo s === hexo server(启动服务)hexo s 此时你在浏览器地址栏输入localhost:4000，就会看到你的博客首页了，到这里我们已经成功了一半了，为什么说一半呢？因为页面自带的landscape主题不太美观:P，我们需要使用其它主题来美化我们的博客页面——比如说Next:)。 安装Next12// 克隆Next主题到theme文件夹git clone https://github.com/iissnan/hexo-theme-next themes/next 配置站点配置文件使用之前下载好的文本编辑器打开位于你的用户名.github.io文件夹下的_config.yml文件，这个就是你的站点配置文件，使用ctrl + F打开搜索功能，搜索字段”theme”，找到如下内容(把它的值由landscape改为next)：12// 注意theme:和next之间一定要有空格，否则不会生效theme: next 其它的配置例如title、author、description等可参见Hexo官方文档 配置Next主题配置文件Next主题配置文件位于你的用户名.github.io/themes/next目录下的_config.yml文件，其中参数比较多，就不一一赘述了，详细可参考Next官方文档如果还有不懂，可以参考我的博客的配置： 配置完之后，在执行下面的命令：12// 启动hexohexo s 现在的界面是不是美观了很多？此时，我们虽然完成了个人博客基本框架的搭建，但是博客始终都是在本地访问的，我们的终极目标是在线上能够通过某个地址访问到自己的博客网站，其实很简单，继续我们未完的征程： 安装自动部署工具12// 首先安装hexo-deployer-git插件npm install hexo-deployer-git --save 部署到github上12345678// 清除缓存hexo clean// 生成静态文件并且部署到github(hexo deploy就用到了hexo-deployer-git插件)hexo generate &amp;&amp; hexo deploy// 上面的命令的简写hexo g &amp;&amp; hexo d]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
       <tags>
-        <tag>Testing</tag>
-        <tag>Another Tag</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
